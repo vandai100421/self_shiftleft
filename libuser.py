@@ -9,9 +9,8 @@ def login(username, password):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    user = c.execute("SELECT * FROM users WHERE username = '{}' and password = '{}'".format(username, password)).fetchone()
-
-    if user:
+    user = c.execute("SELECT * FROM users WHERE username = ?",(username,)).fetchone()
+    if user and password == user['password']:
         return user['username']
     else:
         return False
