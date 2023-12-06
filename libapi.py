@@ -5,8 +5,6 @@ import hashlib
 from pathlib import Path
 
 
-secret = 'MYSUPERSECRETKEY'
-
 def keygen(username, password=None):
 
     if password:
