@@ -7,7 +7,6 @@ from time import time
 
 from pathlib import Path
 
-# secret = 'MYSUPERSECRETKEY'
 not_after = 60 # 1 minute
 
 def keygen(username, password=None, login=True):
