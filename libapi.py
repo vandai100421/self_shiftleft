@@ -5,8 +5,6 @@ import hashlib
 from pathlib import Path
 
 
-secret = 'MYSUPERSECRETKEY'
-
 def keygen(username, password=None):
 
     if password:
@@ -23,7 +21,7 @@ def keygen(username, password=None):
 
     Path(keyfile).touch()
 
-    return key
+    return key 
 
 
 def authenticate(request):
